@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Immigration</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <style>
+      body {
+        background-color: rgb(251, 241, 241);
+}
+      </style>  
+    </head>
+  
+<body>
+
+<!--- Start header-->
+<section id="header" class="cd-secondary-nav">
+   <div class="container-fluid">
+   <div class="row">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style="background-color: rgb(232, 227, 227);">
+              <a class="navbar-brand" href="{% url 'Home' %}"><img src="{% static 'img/logo.png' %}" alt="" style="width:50%;"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:25px; font-family: 'Times New Roman', Times, serif;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'QuiSommesNous' %}">Qui sommes nous</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'NotreEquipe' %}">Notre equipe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+   </div>
+</div>
+</section>
+<!-- End of header -->
+
+<br>
+<br>
+<br>
+<br>
+<section id="center">
+  <div class="container justify-content-center">
+      <div class="row">
+
+{% block content %}
+{% endblock %}
+
+</div> 
+</div>
+</section>
+
+
+<!-- start of footer -->
+<section id="footer">
+	<div class="container-fluid" style="background-color: rgb(232, 227, 227);">
+	  <div class="row">
+		<div class="col-sm-7">
+      <h4>Contact : <img src=" {% static 'img/canada_flag-removebg-preview.png' %}" alt="" width="30px"></h4>
+		 <p class="p_4" >Email : <span><a href="gmail.com">jean@njari-immigration.ca</a></span> ou <span style="color: rgb(237, 112, 112);"><a href="gmail.com">jeanjari1983@gmail.com</a></span></p>
+		  <p class="p_5">Tel (WhatsApp) : <a href="tel:+1 514 210 3279" alt="Call +1 514 210 3279">+1 514 210 3279</a></p>
+		</div>
+		<div class="col-sm-5">
+      <h4>Contact : <img src=" {% static 'img/burundi_940276-removebg-preview.png' %}" alt="" width="30px"></h4>
+      <p class="p_4" >Email : <span><a href="gmail.com">edouard@njari-immigration.ca</a></span> OU <span style="color: rgb(237, 112, 112);"><a href="gmail.com">denise@njari-immigration.ca</a></span></p>
+       <p class="p_5">Tel (WhatsApp) : <a href="tel:+257 61 626 073" alt="Call +257 61 626 073">+257 61 626 073</a> ou <a href="tel:+257 61 427 481" alt="Call +257 61 427 481">+257 61 427 481</a></p>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(item => {
+        item.addEventListener('click', event => {
+            // Remove the 'active' class from all navbar items
+            document.querySelectorAll('.nav-link').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked navbar item
+                //event.target.classList.add('active');
+        });
+    });
+</script>
+   </body>
+  </html> 
+       
+  

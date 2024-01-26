@@ -1,0 +1,16 @@
+
+#center {
+    background-image: url("{% static 'img/flag-canada.jpg'%}");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header .nav-link:hover {
+    color: rgb(237, 125, 125);
+} 
+/* this a short css to change the font when clicked on nav link*/
+#header .nav-link.active {
+    color:  rgb(236, 23, 23); ;
+}
+
+
